@@ -1,0 +1,47 @@
+﻿<ion-header>
+  <ion-navbar>
+    <ion-title>
+        register
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <h2>Welcome  regiter</h2>
+
+    <ion-item>
+        <ion-label floating>用戶名username</ion-label>
+        <ion-input #box1 (keyup)="0"  type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>密碼password</ion-label>
+        <ion-input #box2 (keyup)="0"  type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>驗證碼verifycode</ion-label>
+        <ion-input #box3 (keyup)="0"  type="text"></ion-input>
+    </ion-item>   
+    <ion-item>
+        <img id="verify1" class="decoded" src="{{startindexurl}}/home/index/verify" alt="{{startindexurl}}/home/index/verify" onClick="this.src=this.src+'?='+Math.random()">
+        <p>↑看不清請點擊圖片刷新</p>
+        <p>↑Please click graphics to refresh when not clear</p>
+    </ion-item> 
+        <div padding>
+            
+            <button ion-button full (click)="registerpost(box1.value,box2.value,box3.value)">注册</button>
+        </div>
+
+        <input [(ngModel)]="user.headimg" placeholder="headimg">
+        <img src="{{user.headimg}}">
+        <p>box1.value->{{box1.value}}</p>
+        <p>box2.value->{{box2.value}}</p>
+        <p>user.username->{{user.username}}</p>
+        <p>username1->{{username1}}</p>
+        <p>abc->{{abc}}</p>
+        <p>firstid->{{firstid}}</p>
+        <button ion-item (click)="backaboutpage()">
+            <ion-icon name="return-left" item-left></ion-icon>
+            Return返回
+        </button>
+</ion-content>

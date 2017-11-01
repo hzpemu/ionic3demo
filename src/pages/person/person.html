@@ -1,0 +1,58 @@
+﻿<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Person 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <h2>Ionic 2 646in Visual Studio</h2>
+    <p>
+        This starter project comes with simple tabs-based layout for apps
+        that are going to primarily use a Tabbed UI.
+    </p>
+    <p>
+        Take a look at the <code>src/</code> directory to add or change tabs,
+        update any existing page or create new pages.
+    </p>
+    <p>user.username->{{user.username}}</p>
+    <p>user.userid->{{user.userid}}</p>
+    <img src="{{user.headimg}}">
+    <ion-list>
+
+       <ion-list-header>Please setting person info</ion-list-header>
+
+        <div [ngSwitch] ="user.userid">
+
+            <div *ngSwitchCase="!user.userid || user.userid === ''? user.userid : '' ||user.userid === '0'">
+                <button ion-item (click)="gologin()">
+                    <ion-icon name="log-in" item-left></ion-icon>
+                    用户登录login
+                </button>
+                <button ion-item (click)="goregister()">
+                    <ion-icon name="color-wand" item-left></ion-icon>
+                    注册新用户register
+                </button>
+            </div>
+            <div *ngSwitchDefault>
+                <button ion-item (click)="gologout()">
+                    <ion-icon name="log-out" item-left></ion-icon>
+                    退出当前用户log-out
+                </button>
+                <ion-item>
+                    <ion-icon name="apps" item-left></ion-icon>
+                    个人信息setting person info
+                </ion-item>
+            </div>
+
+        </div>
+
+        <ion-item>
+            <ion-icon name="construct" item-left></ion-icon>
+            设置 config app
+        </ion-item>
+
+</ion-list>
+</ion-content>

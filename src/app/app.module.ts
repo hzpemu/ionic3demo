@@ -11,13 +11,22 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { Storage } from '@ionic/storage';
+import { SQLite } from '@ionic-native/sqlite';
+
+import { PersonPage } from '../pages/person/person';
+import { loginPage } from '../pages/login/login';
+import { registerPage } from '../pages/register/register';
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    PersonPage,
+    loginPage,
+    registerPage
   ],
   imports: [
     BrowserModule,
@@ -29,9 +38,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    PersonPage,
+    loginPage,
+    registerPage
   ],
   providers: [
+    Storage,
+    SQLite,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

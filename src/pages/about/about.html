@@ -7,5 +7,77 @@
 </ion-header>
 
 <ion-content padding>
+    <p>user.username->{{user.username}}</p>
+    <p>user.userid->{{user.userid}}</p>
+    <img src="{{user.headimg}}">
+  <ion-list>
+    <ion-list-header>Follow us on Twitter</ion-list-header>
+    <ion-item><span class="fa fa-google-wallet" color="{{colorc}}"></span>
+        <button ion-item (click)="changeuserid()">
+            <ion-icon name="log-in" color="{{colorc}}" item-left></ion-icon>
+            
+            changeuserid
+        </button>
+        <div *ngIf="!user.userid">
+            !user.userid
+        </div>
+        <div *ngIf="user.userid">
+            user.userid
+        </div>
+        <span [ngSwitch]="user.userid">
+            <span *ngSwitchCase="0">张三</span>
+            <span *ngSwitchCase="">张二</span>
+            <span *ngSwitchDefault>龙大</span>
+        </span>
+        <button ion-item (click)="gologin()">
+            <ion-icon class="fa fa-eject" item-left></ion-icon>
+           
+            log-out
+        </button>
+        <button ion-item (click)="gologin()">
+            <div class="fa fa-eject" ></div>
 
+            log-out1
+        </button>
+        <button ion-item (click)="gologin()">
+            <span class="fa fa-google-wallet"></span>
+
+            log-out2
+        </button>
+    
+        <button ion-item (click)="gologin()">
+            <ion-icon name="color-wand" item-left></ion-icon>
+            register
+        </button>
+    </ion-item>
+        <ion-item>
+            <ion-icon name="ionic" item-left></ion-icon>
+            rrg
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="cafe" item-left></ion-icon>
+            @VSCordovaTools
+        </ion-item>
+    <ion-item>
+        <ion-icon name="heart" item-left></ion-icon>
+        heart
+    </ion-item>
+    <ion-item>
+        <ion-icon name="apps" item-left></ion-icon>
+        个人信息
+    </ion-item>
+    <ion-item>
+        <ion-icon name="construct" item-left></ion-icon>
+        设置
+    </ion-item>
+    <ion-item>
+        <ion-icon name="done-all" item-left></ion-icon>
+        done-all同好
+    </ion-item>
+    <ion-item>
+        <ion-icon name="briefcase" item-left></ion-icon>
+        briefcasejob
+    </ion-item>
+</ion-list>
 </ion-content>
