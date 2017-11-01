@@ -51,4 +51,4 @@ import { registerPage } from '../pages/register/register';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+export class AppModule { }

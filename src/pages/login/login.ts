@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';//, Platform
 
@@ -17,7 +17,7 @@ import { SQLite,SQLiteObject } from '@ionic-native/sqlite';
   selector: 'page-login',
   templateUrl: 'login.html'  
 })
-export class loginPage {
+export class loginPage { 
     //
     //user: User;
 

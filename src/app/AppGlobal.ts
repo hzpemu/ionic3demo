@@ -1,11 +1,11 @@
-﻿import { User } from './user';
+import { User } from './user';
 
 /**
  * AppGlobal 全局定义 单例模式
  */
 export class AppGlobal {
     private static instance: AppGlobal = new AppGlobal();
-
+   
     /**是否是调试状态 */
     isDebug: boolean = true;
     server: string = this.isDebug ? "http://localhost" : "http://www.xxx.com";

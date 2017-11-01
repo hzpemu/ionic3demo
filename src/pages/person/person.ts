@@ -16,7 +16,7 @@ export class PersonPage {
     user = AppGlobal.getInstance().currentUserInfo;
     linklogin: any = loginPage;
    
-    constructor(public navCtrl: NavController) {
+    constructor(public navCtrl: NavController) { 
       
     }
     

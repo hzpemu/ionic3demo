@@ -10,7 +10,7 @@ import { fontawesome } from 'font-awesome';
   templateUrl: 'about.html'
 })
 export class AboutPage {
-  colorc;
+  colorc; 
   user = AppGlobal.getInstance().currentUserInfo;
   linklogin: any = loginPage;
   constructor(public navCtrl: NavController) {
