@@ -41,15 +41,64 @@
         <p>abc->{{abc}}</p>
         <p>firstid->{{firstid}}</p>
         <p>storageisLogin->{{islogin}}</p>
+        <p>logrow->{{logrow}}</p>
 
          <ion-list>ddb
-          <ion-item * ngFor="let logs of log">
-              {{log.id }}
-         {{log.log }} 
-         {{log.time}}
-           
+          <ion-item *ngFor="let log of logs">
+              data
+              1>{{ log}}  <br />
+              10>{{ log[0]}}--{{log['id']}}<br />
+              11>{{ log[1]}}--{{log['log']}} <br />
+              12>{{ log[2]}}--{{log['time']}} <br />
+              1json>{{log[0] | json}} <br /> 
+              1json>{{log[1] | json}} <br /> 
+              1json>{{log[2] | json}} <br />  
+              1json>{{log['id'] | json}} <br /> 
+              1json>{{log['log'] | json}} <br /> 
+              1json>{{log['time'] | json}} <br />               
         </ion-item>dde
           </ion-list>
+
+          <ion-list>logs2b
+            <ion-item *ngFor="let log2 of logs2  ">
+                data
+                2>{{ log2}}  <br />
+                20>{{ log2[0]}} <br />
+                21>{{ log2[1]}} <br />
+                22>{{ log2[2]}}  <br />  
+                20>{{ log2['id']}} <br />
+                21>{{ log2['log']}} <br />
+                22>{{ log2['time']}}  <br />         
+          </ion-item>logs2e
+          </ion-list>
+
+          <ion-list>logs3b
+                <ion-item *ngFor="let log3 of logs3"> 
+                    data                   
+                31json>{{ log3| json}} <br /> 
+                31>{{ log3}} <br />
+                3id>{{ log3.id}} <br />
+                3log>{{ log3.log}} <br />
+                3time>{{ log3.time}} <br />           
+              </ion-item>logs3e
+           </ion-list>  
+           <ion-list>logs4b
+                <ion-item *ngFor="let log4 of logs4"> 
+                    data                   
+                41>{{ log4}} <br /> 
+                4id>{{ log4["id"]}}<br />
+                4log>{{ log4["log"]}} <br />
+                4time>{{ log4["time"]}} <br />   
+                4idjson>{{ log4["id"]| json}}<br />
+                4logjson>{{ log4["log"| json]}} <br />
+                4timejson>{{ log4["time"| json]}} <br /> 
+                4id[]>{{ log4[0]}}<br />
+                4log[]>{{ log4[1]}} <br />
+                4time[]>{{ log4[2]}} <br />         
+              </ion-item>logs4e
+           </ion-list>
+
+
         <button ion-item (click)="backaboutpage()">
             <ion-icon name="return-left" item-left></ion-icon>
             Return返回

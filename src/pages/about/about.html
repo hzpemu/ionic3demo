@@ -10,9 +10,13 @@
     <p>user.username->{{user.username}}</p>
     <p>user.userid->{{user.userid}}</p>
     <img src="{{user.headimg}}">
+
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item><span class="fa fa-google-wallet" color="{{colorc}}"></span>
+    <ion-list-header>支持我们做得更好可以扫码捐赠</ion-list-header>
+    <ion-item>
+            
+        <img src="assets/imgs/alipaymini.png"/>
+        <span class="fa fa-google-wallet" item-left></span>
         <button ion-item (click)="changeuserid()">
             <ion-icon name="log-in" color="{{colorc}}" item-left></ion-icon>
             
@@ -30,7 +34,7 @@
             <span *ngSwitchDefault>龙大</span>
         </span>
         <button ion-item (click)="gologin()">
-            <ion-icon class="fa fa-eject" item-left></ion-icon>
+            <ion-icon class="fa fa-eject" item-left color="{{colorc}}" ></ion-icon>
            
             log-out
         </button>
